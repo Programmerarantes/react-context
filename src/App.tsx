@@ -1,14 +1,16 @@
 import { Footer } from "./components/Footer"
 import { Header } from "./components/Header"
+import { PostList } from "./components/PostList"
 import { PostProvider } from "./contexts/PostContext"
 
 const App = () => {
   return (
     <PostProvider>
-    <div className="container mx-auto">
-        <Header />
-        <Footer />
-    </div>
+      <div className="container mx-auto">
+          <Header />
+          <PostList />
+          <Footer />
+      </div>
    </PostProvider> 
   )
 }
