@@ -9,7 +9,7 @@ export const Header = () => {
 
     const handleAddButton = () => {
         if (titleInput && bodyInput) {
-            postsCtx?.addPost(titleInput, bodyInput)
+            postsCtx?.dispatch({ type: 'add', payload: { title: titleInput, body: bodyInput}})
             setTitleInput('')
             setBodyInput('')
         } 
